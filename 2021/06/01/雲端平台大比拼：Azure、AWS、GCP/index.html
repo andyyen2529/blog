@@ -6,20 +6,21 @@
   
   <title>雲端平台大比拼：Azure、AWS、GCP | 我的部落格</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="因為最近正在參加由 Google cloud 所舉辦的 Google Cloud Sprint Program，再加上過去也有上過 Microsoft Azure 的課程，因此決定寫一篇相關的筆記紀錄三大平台 Amazon Web Service（AWS）、 Microsoft Azure 以及 Google Cloud Platform（GCP）的介紹以及比較。 三大雲端平台基礎建設簡介GCPG">
+  <meta name="description" content="因為最近正在參加由 Google cloud 所舉辦的 Google Cloud Sprint Program，再加上過去也有上過 Microsoft Azure 的課程，因此決定整理一篇相關的筆記紀錄三大平台 Amazon Web Service（AWS）、 Microsoft Azure 以及 Google Cloud Platform（GCP）的介紹以及比較。  三大雲端平台基礎建設簡介GC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="雲端平台大比拼：Azure、AWS、GCP">
 <meta property="og:url" content="https://andyyen2529.github.io/blog/2021/06/01/%E9%9B%B2%E7%AB%AF%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E6%8B%BC%EF%BC%9AAzure%E3%80%81AWS%E3%80%81GCP/index.html">
 <meta property="og:site_name" content="我的部落格">
-<meta property="og:description" content="因為最近正在參加由 Google cloud 所舉辦的 Google Cloud Sprint Program，再加上過去也有上過 Microsoft Azure 的課程，因此決定寫一篇相關的筆記紀錄三大平台 Amazon Web Service（AWS）、 Microsoft Azure 以及 Google Cloud Platform（GCP）的介紹以及比較。 三大雲端平台基礎建設簡介GCPG">
+<meta property="og:description" content="因為最近正在參加由 Google cloud 所舉辦的 Google Cloud Sprint Program，再加上過去也有上過 Microsoft Azure 的課程，因此決定整理一篇相關的筆記紀錄三大平台 Amazon Web Service（AWS）、 Microsoft Azure 以及 Google Cloud Platform（GCP）的介紹以及比較。  三大雲端平台基礎建設簡介GC">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://andyyen2529.github.io/blog/2021/06/01/%E9%9B%B2%E7%AB%AF%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E6%8B%BC%EF%BC%9AAzure%E3%80%81AWS%E3%80%81GCP/%5Cblog%5Cimages%5Cmarket_positioning.jpg">
-<meta property="og:image" content="https://andyyen2529.github.io/blog/2021/06/01/%E9%9B%B2%E7%AB%AF%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E6%8B%BC%EF%BC%9AAzure%E3%80%81AWS%E3%80%81GCP/%5Cblog%5Cimages%5Cpasted-0.png">
+<meta property="og:image" content="https://uploads.sitepoint.com/wp-content/uploads/2016/09/1473644148CloudServices_logos-1024x150.png">
+<meta property="og:image" content="https://www.microfusion.tw/wp-content/uploads/2020/11/%E5%B8%82%E4%BD%94%E7%8E%87%E5%9C%96.jpg">
+<meta property="og:image" content="https://www.xda-developers.com/files/2021/05/Google-IO-2021-Featured-Image-12.jpg">
 <meta property="article:published_time" content="2021-06-01T14:39:32.000Z">
-<meta property="article:modified_time" content="2021-06-01T14:58:21.434Z">
+<meta property="article:modified_time" content="2021-06-01T15:28:52.395Z">
 <meta property="article:author" content="andyyen2529">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://andyyen2529.github.io/blog/2021/06/01/%E9%9B%B2%E7%AB%AF%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E6%8B%BC%EF%BC%9AAzure%E3%80%81AWS%E3%80%81GCP/%5Cblog%5Cimages%5Cmarket_positioning.jpg">
+<meta name="twitter:image" content="https://uploads.sitepoint.com/wp-content/uploads/2016/09/1473644148CloudServices_logos-1024x150.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="我的部落格" type="application/atom+xml">
   
@@ -98,18 +99,95 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>因為最近正在參加由 Google cloud 所舉辦的 Google Cloud Sprint Program，再加上過去也有上過 Microsoft Azure 的課程，因此決定寫一篇相關的筆記紀錄三大平台 Amazon Web Service（AWS）、 Microsoft Azure 以及 Google Cloud Platform（GCP）的介紹以及比較。</p>
+        <p>因為最近正在參加由 Google cloud 所舉辦的 Google Cloud Sprint Program，再加上過去也有上過 Microsoft Azure 的課程，因此決定整理一篇相關的筆記紀錄三大平台 Amazon Web Service（AWS）、 Microsoft Azure 以及 Google Cloud Platform（GCP）的介紹以及比較。</p>
+<p><img src="https://uploads.sitepoint.com/wp-content/uploads/2016/09/1473644148CloudServices_logos-1024x150.png" alt="cloud vendor"></p>
 <h3 id="三大雲端平台基礎建設簡介"><a href="#三大雲端平台基礎建設簡介" class="headerlink" title="三大雲端平台基礎建設簡介"></a>三大雲端平台基礎建設簡介</h3><h6 id="GCP"><a href="#GCP" class="headerlink" title="GCP"></a>GCP</h6><p>Google 數據中心位於台灣彰濱工業區，提供台灣本地高速連線，相較於各大公有雲，更免除因海底纜線故障所造成的網路中斷情形。 Google  持續在全球布建自有的光纖海底電纜，提供高速跨國網路，只要使用 Google 雲端主機就可享有全球快速網路；主機本身網路速度為 CPU 核心數*2Gb/s，最大可達 16Gb/s。</p>
 <h6 id="AWS"><a href="#AWS" class="headerlink" title="AWS"></a>AWS</h6><p>AWS 創立於2006年，目前提供的服務，例如：運算、儲存、資料庫等項目超過70種，相較於其他平台具有領導地位。根據美國市調機構Synergy Research Group 2020年的報告指出，全球雲端市場比去年同期增加37%，而市場先驅 AWS 的成長率恰恰反映整個市場的成長曲線，並穩定維持在32％的市占率。微軟的 Azure 成立於2010年，以18%的市占率排名第二，GCP 則是最晚進入市場，目前以8%市占率位居第三名。</p>
-<h6 id="Azure"><a href="#Azure" class="headerlink" title="Azure"></a>Azure</h6><p>Azure 於2010年成立，核心是公共雲端計算平台，其解決方案包括了－基礎架構即服務（IaaS)、平台即服務（PaaS）和軟體即服務（SaaS) ，可用於分析、虛擬伺服器計算、儲存和網路等等。它可以用於替換或補充您的本地伺服器。<br>Azure 提供 IaaS，PaaS和SaaS 服務。根據需要上下移動計算資源。幾乎支援所有操作系統、語言、工具或框架·可靠 – 99.95％的可用性SLA和24×7技術支援。全球數據存儲在地理同步數據中心。只需支付您使用的費用。<br>2020年10月26日 — 微軟宣布在臺Azure區域級資料中心。</p>
-<p><img src="%5Cblog%5Cimages%5Cmarket_positioning.jpg" alt="market positioning"></p>
-<p><img src="%5Cblog%5Cimages%5Cpasted-0.png" alt="upload successful"></p>
-<p>參考網站:<br><a target="_blank" rel="noopener" href="https://www.microfusion.tw/2020/11/20/cloud-news-20201124/">https://www.microfusion.tw/2020/11/20/cloud-news-20201124/</a><br><a target="_blank" rel="noopener" href="https://cloud.google.com/free/docs/aws-azure-gcp-service-comparison">https://cloud.google.com/free/docs/aws-azure-gcp-service-comparison</a></p>
+<h6 id="Azure"><a href="#Azure" class="headerlink" title="Azure"></a>Azure</h6><p>Azure 於2010年成立，核心是公共雲端計算平台，其解決方案包括了－基礎架構即服務（IaaS)、平台即服務（PaaS）和軟體即服務（SaaS) ，可用於分析、虛擬伺服器計算、儲存和網路等等。它可以用於替換或補充您的本地伺服器。<br>Azure 提供 IaaS，PaaS和SaaS 服務。根據需要上下移動計算資源。幾乎支援所有操作系統、語言、工具或框架·可靠 – 99.95％的可用性SLA和24×7技術支援。全球數據存儲在地理同步數據中心。只需支付您使用的費用。<br>2020年10月26日 — 微軟宣布在臺Azure區域級資料中心。  </p>
+<p><img src="https://www.microfusion.tw/wp-content/uploads/2020/11/%E5%B8%82%E4%BD%94%E7%8E%87%E5%9C%96.jpg" alt="market positioning">  </p>
+<h3 id="架構與運算能力"><a href="#架構與運算能力" class="headerlink" title="架構與運算能力"></a>架構與運算能力</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>GCP</th>
+<th>AWS</th>
+<th>Microsoft Azure</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>地區</td>
+<td>美國</td>
+<td>美國</td>
+<td>美國</td>
+</tr>
+<tr>
+<td>機器類型</td>
+<td>n1-standard-1</td>
+<td>m3.medium</td>
+<td>D1 v2</td>
+</tr>
+<tr>
+<td>虛擬 CPU 數</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>記憶體</td>
+<td>3.75 GB</td>
+<td>3.75 GB</td>
+<td>3.5 GB</td>
+</tr>
+<tr>
+<td>作業系統</td>
+<td>Linux</td>
+<td>Linux</td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>硬碟空間</td>
+<td>50 GB</td>
+<td>50 GB</td>
+<td>50 GB</td>
+</tr>
+<tr>
+<td>硬碟費用</td>
+<td>USD$2</td>
+<td>USD$5</td>
+<td>已包含</td>
+</tr>
+<tr>
+<td>主機費用</td>
+<td>USD$34.67</td>
+<td>USD$49.05</td>
+<td>USD$52.08</td>
+</tr>
+<tr>
+<td>每月費用 (主機+硬碟)</td>
+<td>USD$26.27 (持續使用有折扣)</td>
+<td>USD$54.05</td>
+<td>USD$52.08</td>
+</tr>
+<tr>
+<td>優惠後費用 (主機+硬碟)</td>
+<td>USD$23.84(承諾使用折扣一年)</td>
+<td>USD$40.04(預留執行個體一年無需預付)</td>
+<td>USD$52.08</td>
+</tr>
+</tbody></table>
+<h3 id="整合比較"><a href="#整合比較" class="headerlink" title="整合比較"></a>整合比較</h3><h6 id="GCP-1"><a href="#GCP-1" class="headerlink" title="GCP"></a>GCP</h6><p>作為後起之秀，雖然其 PaaS 功能還沒追趕上 AWS 或 Microsoft Azure 提供的數量，但擁有良好強健的 IaaS 平台，並且在應用容器、大數據管理和機器學習等對應巨大流量與高速運算的服務表現特別突出。另外 GCP 也與許多其他的自家的服務整合。例如，App Engine 與 Firebase 的對接、嵌入 Google Analytics 分析功能等等，都使得 GCP 能夠迅速且方便的支援社群行銷分析，結合淺顯易懂的圖像化後台報表，獲得了許多客戶的青睞。</p>
+<p>最近 Alpha Go 再次地在棋盤上戰勝了人類，背後運算的 TPU 成為熱門的話題，目前 Google 已經宣布 TPU 加入雲端運算的行列，提供 GCP 使用者選擇使用，這是項令人興奮的服務，人人都可以成為 Alpha go 推手。</p>
+<h6 id="AWS-1"><a href="#AWS-1" class="headerlink" title="AWS"></a>AWS</h6><p>AWS 在雲端平台領域耕耘多年，開發出許多服務跨足各個領域。最近推出 Amazon Lumberyard 與旗下的游戲直播服務 Twitch 整合，免費且完整開源，建立高品質的遊戲效能和社群體驗，只是目前尚在 Beta 版本，未來的應用上還有待觀察。另外，AWS Marketplace 簡化了企業客戶在 SaaS 上的使用流程，讓服務供應商和應用商能夠更快速便利的對接，強化了現有產品也補足其本身沒有開發的服務項目。</p>
+<h6 id="Microsoft-Azure"><a href="#Microsoft-Azure" class="headerlink" title="Microsoft Azure"></a>Microsoft Azure</h6><p>Microsoft Azure 一開始是由 PaaS 應用發展而成，後來發展為集合 IaaS、PaaS、SaaS 於一體的服務平台，企圖以「混合雲」與 AWS 進行區分。微軟擁有的最大優勢在於集團與大量企業關係密切，比如叱吒商務文書軟體的微軟 office 365 是 Azure 的關鍵優勢，藉由提供「企業授權」和折扣價格來吸引更多用戶使用 IaaS 服務；有許多的報告分析都指出，如果 Azure 沒有再加強其他雲端上的技術服務，包含硬體機房部署的規劃，將會使之漸漸失去競爭力。</p>
+<h4 id="GCP可視為未來服務的領導者"><a href="#GCP可視為未來服務的領導者" class="headerlink" title="GCP可視為未來服務的領導者"></a>GCP可視為未來服務的領導者</h4><p>GCP 憑藉著 Google 本身的核心「AI first」，一舉在人工智慧和機器學習的服務方面超越其他間的雲端服務商。</p>
+<p>看似家家都有的翻譯（ Translattion API ）、圖片辨識（ Vision API ）、語音功能（ Speech API ），只有 Google 在此方面是被公認的領導者角色；TensorFlow 也被視為業內領先的開源機器學習平台。 看得夠遠的 Google。穩紮穩打讓許多當時不是主流的創新服務成為其優勢。</p>
+<p><img src="https://www.xda-developers.com/files/2021/05/Google-IO-2021-Featured-Image-12.jpg" alt="google IO 2021"></p>
+<p>參考網站:<br><a target="_blank" rel="noopener" href="https://www.microfusion.tw/2020/11/20/cloud-news-20201124/">https://www.microfusion.tw/2020/11/20/cloud-news-20201124/</a><br><a target="_blank" rel="noopener" href="https://cloud.google.com/free/docs/aws-azure-gcp-service-comparison">https://cloud.google.com/free/docs/aws-azure-gcp-service-comparison</a><br><a target="_blank" rel="noopener" href="https://mile.cloud/zh/resources/blog/185/%E9%9B%B2%E7%AB%AF%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E6%8B%BC%EF%BC%9AGoogle%20vs.%20Amazon%20vs.%20Microsoft%20">https://mile.cloud/zh/resources/blog/185/%E9%9B%B2%E7%AB%AF%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E6%8B%BC%EF%BC%9AGoogle%20vs.%20Amazon%20vs.%20Microsoft%20</a><br><a target="_blank" rel="noopener" href="https://events.google.com/io/?lng=en">https://events.google.com/io/?lng=en</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://andyyen2529.github.io/blog/2021/06/01/%E9%9B%B2%E7%AB%AF%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E6%8B%BC%EF%BC%9AAzure%E3%80%81AWS%E3%80%81GCP/" data-id="ckpe62jo300022stc1ofa1727" data-title="雲端平台大比拼：Azure、AWS、GCP" class="article-share-link">Share</a>
+      <a data-url="https://andyyen2529.github.io/blog/2021/06/01/%E9%9B%B2%E7%AB%AF%E5%B9%B3%E5%8F%B0%E5%A4%A7%E6%AF%94%E6%8B%BC%EF%BC%9AAzure%E3%80%81AWS%E3%80%81GCP/" data-id="ckpe7ajl00002octc9alkf4kz" data-title="雲端平台大比拼：Azure、AWS、GCP" class="article-share-link">Share</a>
       
       
       
