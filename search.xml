@@ -14,9 +14,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>My Backend Roadmap</title>
+    <url>/blog/2021/06/12/post-name/</url>
+    <content><![CDATA[<h3 id="Backend-Roadmap"><a href="#Backend-Roadmap" class="headerlink" title="Backend Roadmap"></a>Backend Roadmap</h3><img src="/blog/2021/06/12/post-name/roadmap_%E5%B7%B2%E5%AD%B8.png" class="" title="This is an image">]]></content>
+  </entry>
+  <entry>
     <title>Google Cloud Platform: Core Infrastructure</title>
     <url>/blog/2021/06/26/oogle-Cloud-Platform-Core-Infrastructure/</url>
-    <content><![CDATA[<h3 id="Virtualized-data-centers"><a href="#Virtualized-data-centers" class="headerlink" title="Virtualized data centers"></a>Virtualized data centers</h3><ul>
+    <content><![CDATA[<p><img src="https://www.gstatic.com/devrel-devsite/prod/v29345390480661f31f1340a20aede1ba9b8f625badf7470697c2e7672c91fc58/cloud/images/cloud-logo.svg" alt="GCP logo"></p>
+<h3 id="Virtualized-data-centers"><a href="#Virtualized-data-centers" class="headerlink" title="Virtualized data centers"></a>Virtualized data centers</h3><ul>
 <li>IaaS (Infrastucture as a service) ：類似於資料中心</li>
 <li>Hybrid</li>
 <li>PaaS(Platform as a service)：將程式代碼運算邏輯雲端化</li>
@@ -301,6 +307,13 @@
 <li><a href="https://k21academy.com/google-cloud/google-cloud-storage-and-database/">Google Cloud Storage And Database Services Rundown</a></li>
 </ol>
 ]]></content>
+      <categories>
+        <category>cloud</category>
+      </categories>
+      <tags>
+        <tag>cloud</tag>
+        <tag>GCP</tag>
+      </tags>
   </entry>
   <entry>
     <title>雲端平台大比拼：Azure、AWS、GCP</title>
@@ -399,10 +412,5 @@
         <tag>Azure</tag>
         <tag>AWS</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>My Backend Roadmap</title>
-    <url>/blog/2021/06/12/post-name/</url>
-    <content><![CDATA[<h3 id="Backend-Roadmap"><a href="#Backend-Roadmap" class="headerlink" title="Backend Roadmap"></a>Backend Roadmap</h3><img src="/blog/2021/06/12/post-name/roadmap_%E5%B7%B2%E5%AD%B8.png" class="" title="This is an image">]]></content>
   </entry>
 </search>
